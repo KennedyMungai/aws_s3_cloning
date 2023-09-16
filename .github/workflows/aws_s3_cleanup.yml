@@ -35,4 +35,4 @@ jobs:
                     FILEBASE_ACCESS_KEY_ID=${{ secrets.FILEBASE_ACCESS_KEY_ID }}
                     FILEBASE_SECRET_ACCESS_KEY=${{ secrets.FILEBASE_SECRET_ACCESS_KEY }}
             - name: Execute RClone Sync Job
-              run: rsync --config=rclone.prod.conf sync s3source:kennedymungai dstfilebase:mungai
+              run: rclone --config=rclone.prod.conf sync s3source:kennedymungai dstfilebase:mungai
