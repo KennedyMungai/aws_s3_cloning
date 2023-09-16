@@ -1,0 +1,20 @@
+name: AWS S3 Cleanup
+
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+permissions:
+    id-token: write
+
+jobs:
+    s3_cleanup:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Authentication
+              uses: aws-actions/configure-aws-credentials@v4
+              with:
+                role-to-assume: arn:aws:iam::092376285579:role/aws-s3-cloning
+                aws-region: us-east-1
