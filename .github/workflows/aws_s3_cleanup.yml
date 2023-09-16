@@ -18,5 +18,5 @@ jobs:
             - name: Authentication
               uses: aws-actions/configure-aws-credentials@v4
               with:
-                role-to-assume: arn:aws:iam::092376285579:role/aws-s3-cloning
-                aws-region: us-east-1
+                  role-to-assume: arn:aws:iam::092376285579:role/aws-s3-cloning
+                  aws-region: us-east-1
